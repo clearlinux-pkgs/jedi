@@ -4,12 +4,12 @@
 #
 Name     : jedi
 Version  : 0.11.1
-Release  : 10
+Release  : 12
 URL      : http://pypi.debian.net/jedi/jedi-0.11.1.tar.gz
 Source0  : http://pypi.debian.net/jedi/jedi-0.11.1.tar.gz
 Summary  : An autocompletion tool for Python that can be used for text editors.
 Group    : Development/Tools
-License  : BSD-3-Clause MIT
+License  : MIT
 Requires: jedi-legacypython
 Requires: jedi-python3
 Requires: jedi-python
@@ -25,6 +25,7 @@ BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : tox
 BuildRequires : virtualenv
+Patch1: notests.patch
 
 %description
 Jedi - an awesome autocompletion/static analysis library for Python
@@ -60,18 +61,19 @@ python3 components for the jedi package.
 
 %prep
 %setup -q -n jedi-0.11.1
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1513297767
+export SOURCE_DATE_EPOCH=1513974640
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1513297767
+export SOURCE_DATE_EPOCH=1513974640
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
