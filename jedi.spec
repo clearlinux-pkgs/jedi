@@ -4,7 +4,7 @@
 #
 Name     : jedi
 Version  : 0.12.1
-Release  : 22
+Release  : 23
 URL      : http://pypi.debian.net/jedi/jedi-0.12.1.tar.gz
 Source0  : http://pypi.debian.net/jedi/jedi-0.12.1.tar.gz
 Summary  : An autocompletion tool for Python that can be used for text editors.
