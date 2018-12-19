@@ -4,7 +4,7 @@
 #
 Name     : jedi
 Version  : 0.13.2
-Release  : 26
+Release  : 27
 URL      : https://files.pythonhosted.org/packages/e4/83/4c05db437252694660c972b5374b35a68a8a0a8cd012dc95e5fd4d7e71b0/jedi-0.13.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/e4/83/4c05db437252694660c972b5374b35a68a8a0a8cd012dc95e5fd4d7e71b0/jedi-0.13.2.tar.gz
 Summary  : An autocompletion tool for Python that can be used for text editors.
@@ -60,7 +60,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1545242366
+export SOURCE_DATE_EPOCH=1545246194
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
