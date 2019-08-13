@@ -1,5 +1,5 @@
 PKG_NAME := jedi
-URL = https://files.pythonhosted.org/packages/47/0f/4076fb3f5ec9fb4c92d9eb971fdbd754b1a037dc7724d1754d1fabb7d9b6/jedi-0.15.0.tar.gz
+URL = https://files.pythonhosted.org/packages/85/03/cd5a6e44a5753b4d539288d9d1f9645caac889c17dd2950292a8818f86b2/jedi-0.15.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
