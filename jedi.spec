@@ -4,7 +4,7 @@
 #
 Name     : jedi
 Version  : 0.17.1
-Release  : 6
+Release  : 7
 URL      : https://files.pythonhosted.org/packages/2e/86/3ea824e61de521b2abd9ada9a080375c01721e66266ccc8ba8b3576ad88a/jedi-0.17.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2e/86/3ea824e61de521b2abd9ada9a080375c01721e66266ccc8ba8b3576ad88a/jedi-0.17.1.tar.gz
 Summary  : An autocompletion tool for Python that can be used for text editors.
