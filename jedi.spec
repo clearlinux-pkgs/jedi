@@ -4,7 +4,7 @@
 #
 Name     : jedi
 Version  : 0.17.2
-Release  : 9
+Release  : 10
 URL      : https://files.pythonhosted.org/packages/39/67/50d1653038dafe06ca2cc55c4598c5f8318d519c12a7a288d7826280ee22/jedi-0.17.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/39/67/50d1653038dafe06ca2cc55c4598c5f8318d519c12a7a288d7826280ee22/jedi-0.17.2.tar.gz
 Summary  : An autocompletion tool for Python that can be used for text editors.
@@ -23,6 +23,7 @@ BuildRequires : py-python
 BuildRequires : pytest
 BuildRequires : tox
 BuildRequires : virtualenv
+Patch1: deps.patch
 
 %description
 Jedi - an awesome autocompletion, static analysis and refactoring library for Python
@@ -59,13 +60,14 @@ python3 components for the jedi package.
 %prep
 %setup -q -n jedi-0.17.2
 cd %{_builddir}/jedi-0.17.2
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1595029180
+export SOURCE_DATE_EPOCH=1600966955
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
